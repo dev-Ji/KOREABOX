@@ -33,8 +33,8 @@
 * 전체화면은 밑에 Youtube URL 주소가 있습니다.
 * GIF와 Youtube 영상은 본인이 개발한 파트만 찍었습니다. 나머지는 하단에 캡처!
 
-* 상영스케줄 및 상영관 관리_1<br>
-![상영스케줄,상영관관리_1](https://user-images.githubusercontent.com/58925978/102002606-6fa22d00-3d41-11eb-8555-594af4083d8c.gif)
+* 영화예매 및 예약관리_1<br>
+![영화예매 및 예약관리_1]![ezgif com-gif-maker](https://user-images.githubusercontent.com/73108443/102073791-276d3280-3e47-11eb-82ab-ffaf6fb7ff3f.gif)
 * 상영스케줄 및 상영관 관리_2<br>
 ![상영스케줄,상영관관리_2](https://user-images.githubusercontent.com/58925978/102002610-7df04900-3d41-11eb-9aa1-dc8df899d6a2.gif)
 * 상영스케줄 및 상영관 관리_3<br>
