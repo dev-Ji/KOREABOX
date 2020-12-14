@@ -42,8 +42,13 @@
 
 * 영화예매_2<br><br>
 ![영화예매_2](https://user-images.githubusercontent.com/73108443/102078426-44593400-3e4e-11eb-835e-40d7f9222891.gif)
+- 동시에 날짜, 상영관, 시간, 좌석이 같은 좌석이 예약되지 않도록, 먼저 예약한 회원이 있으면 예약이 되지 않습니다.<br>
+  또한, 예약이 완료된 좌석은 X박스 이미지로 바뀌고, 좌석 선택이 되지 않습니다.<br>
+  ajax를 이용하여 코딩하였습니다.
+  
 * 영화예매_3<br><br>
 ![영화예매_3](https://user-images.githubusercontent.com/73108443/102078817-e6791c00-3e4e-11eb-8610-350578d48866.gif)
+
 * 예약관리(관리자)<br><br>
 ![예약관리(관리자)](https://user-images.githubusercontent.com/73108443/102074493-3f918180-3e48-11eb-8bd2-8e4c7d194eda.gif)
 * 마이페이지-예약확인 및 취소<br><br>
