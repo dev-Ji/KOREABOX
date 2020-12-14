@@ -37,8 +37,8 @@
 ![영화예매](https://user-images.githubusercontent.com/73108443/102073791-276d3280-3e47-11eb-82ab-ffaf6fb7ff3f.gif)
 * 예약관리(관리자)<br><br>
 ![예약관리(관리자)](https://user-images.githubusercontent.com/73108443/102074493-3f918180-3e48-11eb-8bd2-8e4c7d194eda.gif)
-* 상영스케줄 및 상영관 관리_3<br>
-![상영스케줄,상영관관리_3](https://user-images.githubusercontent.com/58925978/102002611-82b4fd00-3d41-11eb-8735-2c38da30279d.gif)
+* 마이페이지-예약확인 및 취소<br><br>
+![마이페이지-예약확인 및 취소](https://user-images.githubusercontent.com/73108443/102075261-597f9400-3e49-11eb-852e-8d73416b26d1.gif)
 * 상영스케줄 및 상영관 관리_4<br>
 ![상영스케줄,상영관관리_4](https://user-images.githubusercontent.com/58925978/102002615-89437480-3d41-11eb-975f-33f9abec39b1.gif)
 <br><br>
