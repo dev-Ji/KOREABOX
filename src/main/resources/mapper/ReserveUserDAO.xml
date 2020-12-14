@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.goldspoon.koreabox.reserveuser.beans.ReserveUserDAO">
+
+	<select id="tb_showinfo" resultType="com.goldspoon.koreabox.reserveuser.beans.ReserveUserDTO">
+		SELECT
+			shw_num shw_num,
+			shw_movieNum shw_movieNum,
+			shw_movieName shw_movieName,
+			shw_screenNum shw_screenNum,
+			shw_screenName shw_screenName,
+			shw_date shw_date,
+			shw_time shw_time,
+			shw_seatCnt shw_seatCnt,
+			shw_seatRow shw_seatRow,
+			shw_seatLine shw_seatLine,
+			shw_expireFlag shw_expireFlag
+		FROM tb_showinfo
+		WHERE shw_movieNum=#{mov_num}
+	</select>
+
+	<select id="reserveCntAll" resultType="int">
+		SELECT COUNT(*) FROM TB_RESERVE
+	</select>
+
+	<insert id="insert_tb_reserve" flushCache="true">
+		INSERT INTO TB_RESERVE
+		VALUES
+			(SEQ_tb_reserve_res_num.nextval,
+			#{res_movieNum},#{res_movieName},#{res_screenNum},#{res_screenName}
+			,#{res_date},#{res_time},#{res_seat},#{res_totalPeople},#{res_memberUid}
+			,#{res_memberId},SYSDATE,#{res_pay},#{res_code})
+	</insert>
+
+
+
+
+
+
+</mapper>

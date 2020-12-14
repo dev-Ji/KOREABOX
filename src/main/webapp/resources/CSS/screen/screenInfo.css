@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+body{
+	width: 100%;
+	height: 900px;
+	display: block;
+	justify-content: center;
+}
+
+.container{
+	width: 1200px;
+	display: block;
+	justify-content: center;
+
+}
+#title{
+	margin-bottom: 50px;
+
+}
+#title h2{
+	text-align: center;
+}
+
+#screenRegist{
+	width: 100%;
+	height: 20vh;
+	margin-top: 60px;
+	padding-bottom: 10%;
+
+
+}
+#screenRegist h3, th,td{
+	text-align: center;
+}
+#screenInfo{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+#screenList{
+	width: 100%;
+	height: 60vh;
+	margin-top: 15%;
+	padding-bottom: 10%;
+
+	}
+#screenList h3{
+	text-align: center;
+}
+#screenTable{
+	width: 100%;
+
+	border-collapse: collapse;
+}
+#screenTable th, td{
+
+	border-collapse: collapse;
+	width: 20%;
+	text-align: center;
+}
+
+#frmRegist{
+	
+	align-content: center;
+	
+}
+
+
+.formDiv{
+	
+	margin-top : 10%;
+	width: 100%;
+	
+}
+
+.btnDiv{
+	
+	float: right;
+	padding: 2%;
+	
+}
+/* 페이징 */
+.center {
+    text-align: center;
+}
+
+ul.pagination{
+	list-style-type:none
+}
+
+ul.pagination li{
+    display: inline-block;
+}
+
+ul.pagination a {
+    color: black;
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+    transition: background-color .3s;
+    /* border: 1px solid #ddd; */
+    /* margin: 0 4px; */
+    margin: 0px;
+}
+
+ul.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+

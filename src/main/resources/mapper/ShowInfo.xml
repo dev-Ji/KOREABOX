@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.goldspoon.koreabox.showinfo.beans.IAjaxDAO">
+
+	<select id="selectFromRow" resultType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+		<![CDATA[
+		SELECT
+			shw_num,
+			shw_movieNum,
+			shw_movieName,
+			shw_screenNum,
+			shw_screenName,
+			shw_date,
+			shw_time,
+			shw_seatCnt,
+			shw_seatRow,
+			shw_seatLine,
+			shw_regDate,
+			shw_expireFlag
+		FROM 
+			(SELECT ROWNUM AS RNUM, T.* FROM 
+				(SELECT * FROM tb_showinfo ORDER BY shw_num DESC) T) 
+		WHERE 
+			RNUM >= #{from} AND RNUM < (#{from} + #{pageRows})		
+		]]>
+	</select>
+	
+	
+	<!-- 상영관정보 가져와야되서 필요 -->
+	<select id="selectAllScreenInfo" resultType="com.goldspoon.koreabox.showinfo.beans.ScreenInfoDTO">
+		SELECT
+			scr_num,
+			scr_name,
+			scr_seatRow,
+			scr_seatLine
+		FROM tb_screeninfo
+	</select>
+	
+	
+	<!-- mov_num, mov_title 가져와야되서 필요 -->
+	<select id="selectAllMovieNumTitle" resultType="com.goldspoon.koreabox.showinfo.beans.MovieInfoDTO">
+		SELECT
+			mov_num,
+			mov_title,
+			mov_openDate
+		FROM tb_movie
+	</select>
+	
+	
+	<!-- 상영스케줄 관리시 예약테이블 먼저조회해야되서 필요-->
+	<select id="selectAllReserveInfo" resultType="com.goldspoon.koreabox.showinfo.beans.ReserveInfoDTO">
+		SELECT
+		   res_num,	
+		   res_movieNum,
+		   res_movieName,
+		   res_screenNum,
+		   res_screenName,
+		   res_date,
+		   res_time,
+		   res_seat,
+		   res_totalPeople,
+		   res_memberUid,
+		   res_memberId,
+		   res_paytime,
+		   res_pay,
+		   res_code			
+		FROM tb_reserve			
+	</select>
+	
+	<!--
+	<select id="selectInfo" resultType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+		<![CDATA[
+		SELECT
+			shw_num,
+			shw_movieNum,
+			shw_movieName,
+			shw_screenNum,
+			shw_screenName,
+			shw_date,
+			shw_time,
+			shw_seatCnt,
+			shw_seatRow,
+			shw_seatLine,
+			shw_regDate,
+			shw_expireFlag
+		FROM 
+			tb_showinfo
+		WHERE 
+			shw_num = #{shw_num}	
+		]]>
+	</select>
+	-->
+	
+	
+	<!-- 상영스케쥴 모달창 필요 전체 정보 조회 -->
+	<select id="selectAllInfo" resultType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+		<![CDATA[
+		SELECT
+			shw_num,
+			shw_movieNum,
+			shw_movieName,
+			shw_screenNum,
+			shw_screenName,
+			shw_date,
+			shw_time,
+			shw_seatCnt,
+			shw_seatRow,
+			shw_seatLine,
+			shw_regDate,
+			shw_expireFlag
+		FROM 
+			tb_showinfo	
+		]]>
+	</select>
+	
+	
+	
+	<select id="countAll" resultType="int">
+		SELECT count(*) FROM tb_showinfo
+	</select>
+
+
+	<!--useGeneratedKeys="true" KeyColumn="shw_num" keyProperty="shw_num" -->
+	<insert id="insert" flushCache="true" 
+		parameterType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+		INSERT INTO tb_showinfo
+			(
+			shw_num,shw_movieNum,shw_movieName,shw_screenNum,shw_screenName,shw_date,
+			shw_time,shw_seatCnt,shw_seatRow,shw_seatLine,shw_regDate,shw_expireFlag
+			)
+		VALUES
+			(
+			SEQ_tb_showinfo_shw_num.nextval, 
+			#{param1}, #{param2}, #{param3}, #{param4}, #{param5}, #{param6}, #{param7, jdbcType=NUMERIC}, #{param8, jdbcType=NUMERIC}, #{param9, jdbcType=NUMERIC}, SYSDATE, 0
+			)
+	</insert>
+	
+	<update id="updateOk" flushCache="true"
+		parameterType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+		UPDATE tb_showinfo
+		SET shw_movieNum = #{shw_movieNum}, shw_movieName = #{shw_movieName}
+		WHERE shw_num = #{shw_num}
+	</update>
+
+
+	 <delete id="deleteByNum" flushCache="true"
+	 	parameterType="com.goldspoon.koreabox.showinfo.beans.ShowInfoDTO">
+	 
+	 	DELETE FROM tb_showinfo
+	 	WHERE shw_num = #{shw_num}
+	 </delete>
+	 
+	 
+</mapper>
+
