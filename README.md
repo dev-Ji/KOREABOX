@@ -9,8 +9,8 @@
 * 영화 예매를 위한 스프링3.0 MVC 기반 사이트입니다.
 
 ### Maintainer
-* 유의상 (devYoooo) :crown:(팀장)
-* 이지연 (dev-Ji)
+* 이지연 (dev-Ji) :crown:(팀장)
+* 유의상 (devYoooo) 
 * 안신혁 (hyuk0912)
 * 이슬아 (seulAh0729)
 
