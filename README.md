@@ -33,10 +33,10 @@
 * 전체화면은 밑에 Youtube URL 주소가 있습니다.
 * GIF와 Youtube 영상은 본인이 개발한 파트만 찍었습니다. 나머지는 하단에 캡처!
 
-* 영화예매 및 예약관리_1<br><br>
-![영화예매 및 예약관리_1](https://user-images.githubusercontent.com/73108443/102073791-276d3280-3e47-11eb-82ab-ffaf6fb7ff3f.gif)
-* 상영스케줄 및 상영관 관리_2<br>
-![상영스케줄,상영관관리_2](https://user-images.githubusercontent.com/58925978/102002610-7df04900-3d41-11eb-9aa1-dc8df899d6a2.gif)
+* 영화예매 <br><br>
+![영화예매](https://user-images.githubusercontent.com/73108443/102073791-276d3280-3e47-11eb-82ab-ffaf6fb7ff3f.gif)
+* 예약관리(관리자)<br><br>
+![예약관리(관리자)](https://user-images.githubusercontent.com/73108443/102074493-3f918180-3e48-11eb-8bd2-8e4c7d194eda.gif)
 * 상영스케줄 및 상영관 관리_3<br>
 ![상영스케줄,상영관관리_3](https://user-images.githubusercontent.com/58925978/102002611-82b4fd00-3d41-11eb-8735-2c38da30279d.gif)
 * 상영스케줄 및 상영관 관리_4<br>
